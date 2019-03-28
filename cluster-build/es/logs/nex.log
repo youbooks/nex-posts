@@ -1,0 +1,593 @@
+[2018-04-13T15:11:09,317][WARN ][o.e.b.JNANatives         ] Unable to lock JVM Memory: error=78, reason=Function not implemented
+[2018-04-13T15:11:09,319][WARN ][o.e.b.JNANatives         ] This can result in part of the JVM being swapped out.
+[2018-04-13T15:11:09,602][INFO ][o.e.n.Node               ] [node-3] initializing ...
+[2018-04-13T15:11:09,684][INFO ][o.e.e.NodeEnvironment    ] [node-3] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [264.7gb], net total_space [389.2gb], types [apfs]
+[2018-04-13T15:11:09,684][INFO ][o.e.e.NodeEnvironment    ] [node-3] heap size [990.7mb], compressed ordinary object pointers [true]
+[2018-04-13T15:11:09,686][INFO ][o.e.n.Node               ] [node-3] node name [node-3], node ID [OZwgRpwRSJGNf6jAM1DRaA]
+[2018-04-13T15:11:09,686][INFO ][o.e.n.Node               ] [node-3] version[6.2.3], pid[5643], build[c59ff00/2018-03-13T10:06:29.741383Z], OS[Mac OS X/10.13.4/x86_64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/1.8.0_121/25.121-b13]
+[2018-04-13T15:11:09,686][INFO ][o.e.n.Node               ] [node-3] JVM arguments [-Xms1g, -Xmx1g, -XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/var/folders/hr/c1f08q_n0msf4gp05cdnc04c0000gn/T/elasticsearch.mqAuHkfP, -XX:+HeapDumpOnOutOfMemoryError, -XX:+PrintGCDetails, -XX:+PrintGCDateStamps, -XX:+PrintTenuringDistribution, -XX:+PrintGCApplicationStoppedTime, -Xloggc:logs/gc.log, -XX:+UseGCLogFileRotation, -XX:NumberOfGCLogFiles=32, -XX:GCLogFileSize=64m, -Des.path.home=/Users/wangwang/Repo/集群搭建/es/elasticsearch-6.2.3_3, -Des.path.conf=/Users/wangwang/Repo/集群搭建/es/elasticsearch-6.2.3_3/config]
+[2018-04-13T15:11:10,743][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [aggs-matrix-stats]
+[2018-04-13T15:11:10,743][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [analysis-common]
+[2018-04-13T15:11:10,743][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [ingest-common]
+[2018-04-13T15:11:10,743][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [lang-expression]
+[2018-04-13T15:11:10,743][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [lang-mustache]
+[2018-04-13T15:11:10,743][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [lang-painless]
+[2018-04-13T15:11:10,744][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [mapper-extras]
+[2018-04-13T15:11:10,744][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [parent-join]
+[2018-04-13T15:11:10,744][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [percolator]
+[2018-04-13T15:11:10,744][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [rank-eval]
+[2018-04-13T15:11:10,744][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [reindex]
+[2018-04-13T15:11:10,744][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [repository-url]
+[2018-04-13T15:11:10,744][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [transport-netty4]
+[2018-04-13T15:11:10,744][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [tribe]
+[2018-04-13T15:11:10,745][INFO ][o.e.p.PluginsService     ] [node-3] no plugins loaded
+[2018-04-13T15:11:13,268][ERROR][o.e.b.Bootstrap          ] Exception
+java.lang.IllegalArgumentException: unknown setting [path.plugins] please check that any required plugins are installed, or check the breaking changes documentation for removed settings
+	at org.elasticsearch.common.settings.AbstractScopedSettings.validate(AbstractScopedSettings.java:346) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.common.settings.AbstractScopedSettings.validate(AbstractScopedSettings.java:310) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.common.settings.AbstractScopedSettings.validate(AbstractScopedSettings.java:284) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.common.settings.SettingsModule.<init>(SettingsModule.java:134) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.node.Node.<init>(Node.java:331) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.node.Node.<init>(Node.java:246) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:213) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:213) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:323) [elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:121) [elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:112) [elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:86) [elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:124) [elasticsearch-cli-6.2.3.jar:6.2.3]
+	at org.elasticsearch.cli.Command.main(Command.java:90) [elasticsearch-cli-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:92) [elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:85) [elasticsearch-6.2.3.jar:6.2.3]
+	Suppressed: java.lang.IllegalArgumentException: unknown setting [script.engine.groovy.inline.aggs] please check that any required plugins are installed, or check the breaking changes documentation for removed settings
+		at org.elasticsearch.common.settings.AbstractScopedSettings.validate(AbstractScopedSettings.java:346) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.common.settings.AbstractScopedSettings.validate(AbstractScopedSettings.java:310) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.common.settings.AbstractScopedSettings.validate(AbstractScopedSettings.java:284) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.common.settings.SettingsModule.<init>(SettingsModule.java:134) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.node.Node.<init>(Node.java:331) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.node.Node.<init>(Node.java:246) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:213) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:213) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:323) [elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:121) [elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:112) [elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:86) [elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:124) [elasticsearch-cli-6.2.3.jar:6.2.3]
+		at org.elasticsearch.cli.Command.main(Command.java:90) [elasticsearch-cli-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:92) [elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:85) [elasticsearch-6.2.3.jar:6.2.3]
+	Suppressed: java.lang.IllegalArgumentException: unknown setting [script.engine.groovy.inline.search] please check that any required plugins are installed, or check the breaking changes documentation for removed settings
+		at org.elasticsearch.common.settings.AbstractScopedSettings.validate(AbstractScopedSettings.java:346) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.common.settings.AbstractScopedSettings.validate(AbstractScopedSettings.java:310) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.common.settings.AbstractScopedSettings.validate(AbstractScopedSettings.java:284) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.common.settings.SettingsModule.<init>(SettingsModule.java:134) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.node.Node.<init>(Node.java:331) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.node.Node.<init>(Node.java:246) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:213) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:213) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:323) [elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:121) [elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:112) [elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:86) [elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:124) [elasticsearch-cli-6.2.3.jar:6.2.3]
+		at org.elasticsearch.cli.Command.main(Command.java:90) [elasticsearch-cli-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:92) [elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:85) [elasticsearch-6.2.3.jar:6.2.3]
+[2018-04-13T15:11:13,276][WARN ][o.e.b.ElasticsearchUncaughtExceptionHandler] [node-3] uncaught exception in thread [main]
+org.elasticsearch.bootstrap.StartupException: java.lang.IllegalArgumentException: unknown setting [path.plugins] please check that any required plugins are installed, or check the breaking changes documentation for removed settings
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:125) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:112) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:86) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:124) ~[elasticsearch-cli-6.2.3.jar:6.2.3]
+	at org.elasticsearch.cli.Command.main(Command.java:90) ~[elasticsearch-cli-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:92) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:85) ~[elasticsearch-6.2.3.jar:6.2.3]
+Caused by: java.lang.IllegalArgumentException: unknown setting [path.plugins] please check that any required plugins are installed, or check the breaking changes documentation for removed settings
+	at org.elasticsearch.common.settings.AbstractScopedSettings.validate(AbstractScopedSettings.java:346) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.common.settings.AbstractScopedSettings.validate(AbstractScopedSettings.java:310) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.common.settings.AbstractScopedSettings.validate(AbstractScopedSettings.java:284) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.common.settings.SettingsModule.<init>(SettingsModule.java:134) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.node.Node.<init>(Node.java:331) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.node.Node.<init>(Node.java:246) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:213) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:213) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:323) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:121) ~[elasticsearch-6.2.3.jar:6.2.3]
+	... 6 more
+	Suppressed: java.lang.IllegalArgumentException: unknown setting [script.engine.groovy.inline.aggs] please check that any required plugins are installed, or check the breaking changes documentation for removed settings
+		at org.elasticsearch.common.settings.AbstractScopedSettings.validate(AbstractScopedSettings.java:346) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.common.settings.AbstractScopedSettings.validate(AbstractScopedSettings.java:310) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.common.settings.AbstractScopedSettings.validate(AbstractScopedSettings.java:284) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.common.settings.SettingsModule.<init>(SettingsModule.java:134) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.node.Node.<init>(Node.java:331) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.node.Node.<init>(Node.java:246) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:213) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:213) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:323) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:121) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:112) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:86) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:124) ~[elasticsearch-cli-6.2.3.jar:6.2.3]
+		at org.elasticsearch.cli.Command.main(Command.java:90) ~[elasticsearch-cli-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:92) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:85) ~[elasticsearch-6.2.3.jar:6.2.3]
+	Suppressed: java.lang.IllegalArgumentException: unknown setting [script.engine.groovy.inline.search] please check that any required plugins are installed, or check the breaking changes documentation for removed settings
+		at org.elasticsearch.common.settings.AbstractScopedSettings.validate(AbstractScopedSettings.java:346) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.common.settings.AbstractScopedSettings.validate(AbstractScopedSettings.java:310) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.common.settings.AbstractScopedSettings.validate(AbstractScopedSettings.java:284) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.common.settings.SettingsModule.<init>(SettingsModule.java:134) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.node.Node.<init>(Node.java:331) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.node.Node.<init>(Node.java:246) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:213) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:213) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:323) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:121) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:112) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:86) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:124) ~[elasticsearch-cli-6.2.3.jar:6.2.3]
+		at org.elasticsearch.cli.Command.main(Command.java:90) ~[elasticsearch-cli-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:92) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:85) ~[elasticsearch-6.2.3.jar:6.2.3]
+[2018-04-13T15:11:49,254][WARN ][o.e.b.JNANatives         ] Unable to lock JVM Memory: error=78, reason=Function not implemented
+[2018-04-13T15:11:49,256][WARN ][o.e.b.JNANatives         ] This can result in part of the JVM being swapped out.
+[2018-04-13T15:11:49,475][INFO ][o.e.n.Node               ] [node-3] initializing ...
+[2018-04-13T15:11:49,561][INFO ][o.e.e.NodeEnvironment    ] [node-3] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [264.7gb], net total_space [389.2gb], types [apfs]
+[2018-04-13T15:11:49,561][INFO ][o.e.e.NodeEnvironment    ] [node-3] heap size [990.7mb], compressed ordinary object pointers [true]
+[2018-04-13T15:11:49,563][INFO ][o.e.n.Node               ] [node-3] node name [node-3], node ID [OZwgRpwRSJGNf6jAM1DRaA]
+[2018-04-13T15:11:49,564][INFO ][o.e.n.Node               ] [node-3] version[6.2.3], pid[5666], build[c59ff00/2018-03-13T10:06:29.741383Z], OS[Mac OS X/10.13.4/x86_64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/1.8.0_121/25.121-b13]
+[2018-04-13T15:11:49,564][INFO ][o.e.n.Node               ] [node-3] JVM arguments [-Xms1g, -Xmx1g, -XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/var/folders/hr/c1f08q_n0msf4gp05cdnc04c0000gn/T/elasticsearch.lwaNtoC7, -XX:+HeapDumpOnOutOfMemoryError, -XX:+PrintGCDetails, -XX:+PrintGCDateStamps, -XX:+PrintTenuringDistribution, -XX:+PrintGCApplicationStoppedTime, -Xloggc:logs/gc.log, -XX:+UseGCLogFileRotation, -XX:NumberOfGCLogFiles=32, -XX:GCLogFileSize=64m, -Des.path.home=/Users/wangwang/Repo/集群搭建/es/elasticsearch-6.2.3_3, -Des.path.conf=/Users/wangwang/Repo/集群搭建/es/elasticsearch-6.2.3_3/config]
+[2018-04-13T15:11:50,584][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [aggs-matrix-stats]
+[2018-04-13T15:11:50,585][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [analysis-common]
+[2018-04-13T15:11:50,585][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [ingest-common]
+[2018-04-13T15:11:50,586][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [lang-expression]
+[2018-04-13T15:11:50,586][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [lang-mustache]
+[2018-04-13T15:11:50,586][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [lang-painless]
+[2018-04-13T15:11:50,586][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [mapper-extras]
+[2018-04-13T15:11:50,586][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [parent-join]
+[2018-04-13T15:11:50,586][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [percolator]
+[2018-04-13T15:11:50,586][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [rank-eval]
+[2018-04-13T15:11:50,587][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [reindex]
+[2018-04-13T15:11:50,587][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [repository-url]
+[2018-04-13T15:11:50,588][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [transport-netty4]
+[2018-04-13T15:11:50,588][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [tribe]
+[2018-04-13T15:11:50,589][INFO ][o.e.p.PluginsService     ] [node-3] no plugins loaded
+[2018-04-13T15:11:52,669][ERROR][o.e.b.Bootstrap          ] Exception
+java.lang.IllegalArgumentException: unknown setting [script.engine.groovy.inline.aggs] please check that any required plugins are installed, or check the breaking changes documentation for removed settings
+	at org.elasticsearch.common.settings.AbstractScopedSettings.validate(AbstractScopedSettings.java:346) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.common.settings.AbstractScopedSettings.validate(AbstractScopedSettings.java:310) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.common.settings.AbstractScopedSettings.validate(AbstractScopedSettings.java:284) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.common.settings.SettingsModule.<init>(SettingsModule.java:134) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.node.Node.<init>(Node.java:331) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.node.Node.<init>(Node.java:246) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:213) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:213) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:323) [elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:121) [elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:112) [elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:86) [elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:124) [elasticsearch-cli-6.2.3.jar:6.2.3]
+	at org.elasticsearch.cli.Command.main(Command.java:90) [elasticsearch-cli-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:92) [elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:85) [elasticsearch-6.2.3.jar:6.2.3]
+	Suppressed: java.lang.IllegalArgumentException: unknown setting [script.engine.groovy.inline.search] please check that any required plugins are installed, or check the breaking changes documentation for removed settings
+		at org.elasticsearch.common.settings.AbstractScopedSettings.validate(AbstractScopedSettings.java:346) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.common.settings.AbstractScopedSettings.validate(AbstractScopedSettings.java:310) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.common.settings.AbstractScopedSettings.validate(AbstractScopedSettings.java:284) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.common.settings.SettingsModule.<init>(SettingsModule.java:134) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.node.Node.<init>(Node.java:331) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.node.Node.<init>(Node.java:246) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:213) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:213) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:323) [elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:121) [elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:112) [elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:86) [elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:124) [elasticsearch-cli-6.2.3.jar:6.2.3]
+		at org.elasticsearch.cli.Command.main(Command.java:90) [elasticsearch-cli-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:92) [elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:85) [elasticsearch-6.2.3.jar:6.2.3]
+[2018-04-13T15:11:52,678][WARN ][o.e.b.ElasticsearchUncaughtExceptionHandler] [node-3] uncaught exception in thread [main]
+org.elasticsearch.bootstrap.StartupException: java.lang.IllegalArgumentException: unknown setting [script.engine.groovy.inline.aggs] please check that any required plugins are installed, or check the breaking changes documentation for removed settings
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:125) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:112) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:86) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:124) ~[elasticsearch-cli-6.2.3.jar:6.2.3]
+	at org.elasticsearch.cli.Command.main(Command.java:90) ~[elasticsearch-cli-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:92) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:85) ~[elasticsearch-6.2.3.jar:6.2.3]
+Caused by: java.lang.IllegalArgumentException: unknown setting [script.engine.groovy.inline.aggs] please check that any required plugins are installed, or check the breaking changes documentation for removed settings
+	at org.elasticsearch.common.settings.AbstractScopedSettings.validate(AbstractScopedSettings.java:346) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.common.settings.AbstractScopedSettings.validate(AbstractScopedSettings.java:310) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.common.settings.AbstractScopedSettings.validate(AbstractScopedSettings.java:284) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.common.settings.SettingsModule.<init>(SettingsModule.java:134) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.node.Node.<init>(Node.java:331) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.node.Node.<init>(Node.java:246) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:213) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:213) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:323) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:121) ~[elasticsearch-6.2.3.jar:6.2.3]
+	... 6 more
+	Suppressed: java.lang.IllegalArgumentException: unknown setting [script.engine.groovy.inline.search] please check that any required plugins are installed, or check the breaking changes documentation for removed settings
+		at org.elasticsearch.common.settings.AbstractScopedSettings.validate(AbstractScopedSettings.java:346) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.common.settings.AbstractScopedSettings.validate(AbstractScopedSettings.java:310) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.common.settings.AbstractScopedSettings.validate(AbstractScopedSettings.java:284) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.common.settings.SettingsModule.<init>(SettingsModule.java:134) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.node.Node.<init>(Node.java:331) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.node.Node.<init>(Node.java:246) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:213) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:213) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:323) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:121) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:112) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:86) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:124) ~[elasticsearch-cli-6.2.3.jar:6.2.3]
+		at org.elasticsearch.cli.Command.main(Command.java:90) ~[elasticsearch-cli-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:92) ~[elasticsearch-6.2.3.jar:6.2.3]
+		at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:85) ~[elasticsearch-6.2.3.jar:6.2.3]
+[2018-04-13T15:12:29,681][WARN ][o.e.b.JNANatives         ] Unable to lock JVM Memory: error=78, reason=Function not implemented
+[2018-04-13T15:12:29,683][WARN ][o.e.b.JNANatives         ] This can result in part of the JVM being swapped out.
+[2018-04-13T15:12:29,891][INFO ][o.e.n.Node               ] [node-3] initializing ...
+[2018-04-13T15:12:29,965][INFO ][o.e.e.NodeEnvironment    ] [node-3] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [264.7gb], net total_space [389.2gb], types [apfs]
+[2018-04-13T15:12:29,966][INFO ][o.e.e.NodeEnvironment    ] [node-3] heap size [990.7mb], compressed ordinary object pointers [true]
+[2018-04-13T15:12:29,967][INFO ][o.e.n.Node               ] [node-3] node name [node-3], node ID [OZwgRpwRSJGNf6jAM1DRaA]
+[2018-04-13T15:12:29,968][INFO ][o.e.n.Node               ] [node-3] version[6.2.3], pid[5688], build[c59ff00/2018-03-13T10:06:29.741383Z], OS[Mac OS X/10.13.4/x86_64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/1.8.0_121/25.121-b13]
+[2018-04-13T15:12:29,969][INFO ][o.e.n.Node               ] [node-3] JVM arguments [-Xms1g, -Xmx1g, -XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/var/folders/hr/c1f08q_n0msf4gp05cdnc04c0000gn/T/elasticsearch.2iv3jKTM, -XX:+HeapDumpOnOutOfMemoryError, -XX:+PrintGCDetails, -XX:+PrintGCDateStamps, -XX:+PrintTenuringDistribution, -XX:+PrintGCApplicationStoppedTime, -Xloggc:logs/gc.log, -XX:+UseGCLogFileRotation, -XX:NumberOfGCLogFiles=32, -XX:GCLogFileSize=64m, -Des.path.home=/Users/wangwang/Repo/集群搭建/es/elasticsearch-6.2.3_3, -Des.path.conf=/Users/wangwang/Repo/集群搭建/es/elasticsearch-6.2.3_3/config]
+[2018-04-13T15:12:30,854][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [aggs-matrix-stats]
+[2018-04-13T15:12:30,854][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [analysis-common]
+[2018-04-13T15:12:30,854][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [ingest-common]
+[2018-04-13T15:12:30,854][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [lang-expression]
+[2018-04-13T15:12:30,855][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [lang-mustache]
+[2018-04-13T15:12:30,855][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [lang-painless]
+[2018-04-13T15:12:30,855][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [mapper-extras]
+[2018-04-13T15:12:30,855][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [parent-join]
+[2018-04-13T15:12:30,855][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [percolator]
+[2018-04-13T15:12:30,855][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [rank-eval]
+[2018-04-13T15:12:30,855][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [reindex]
+[2018-04-13T15:12:30,855][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [repository-url]
+[2018-04-13T15:12:30,855][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [transport-netty4]
+[2018-04-13T15:12:30,856][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [tribe]
+[2018-04-13T15:12:30,856][INFO ][o.e.p.PluginsService     ] [node-3] no plugins loaded
+[2018-04-13T15:12:33,514][INFO ][o.e.d.DiscoveryModule    ] [node-3] using discovery type [zen]
+[2018-04-13T15:12:34,110][INFO ][o.e.n.Node               ] [node-3] initialized
+[2018-04-13T15:12:34,110][INFO ][o.e.n.Node               ] [node-3] starting ...
+[2018-04-13T15:12:34,323][INFO ][o.e.t.TransportService   ] [node-3] publish_address {192.168.101.184:9302}, bound_addresses {[::]:9302}
+[2018-04-13T15:12:34,333][INFO ][o.e.b.BootstrapChecks    ] [node-3] bound or publishing to a non-loopback address, enforcing bootstrap checks
+[2018-04-13T15:12:34,337][ERROR][o.e.b.Bootstrap          ] [node-3] node validation exception
+[1] bootstrap checks failed
+[1]: memory locking requested for elasticsearch process but memory is not locked
+[2018-04-13T15:12:34,339][INFO ][o.e.n.Node               ] [node-3] stopping ...
+[2018-04-13T15:12:34,451][INFO ][o.e.n.Node               ] [node-3] stopped
+[2018-04-13T15:12:34,452][INFO ][o.e.n.Node               ] [node-3] closing ...
+[2018-04-13T15:12:34,461][INFO ][o.e.n.Node               ] [node-3] closed
+[2018-04-13T15:12:50,048][INFO ][o.e.n.Node               ] [node-3] initializing ...
+[2018-04-13T15:12:50,128][INFO ][o.e.e.NodeEnvironment    ] [node-3] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [264.7gb], net total_space [389.2gb], types [apfs]
+[2018-04-13T15:12:50,129][INFO ][o.e.e.NodeEnvironment    ] [node-3] heap size [990.7mb], compressed ordinary object pointers [true]
+[2018-04-13T15:12:50,130][INFO ][o.e.n.Node               ] [node-3] node name [node-3], node ID [OZwgRpwRSJGNf6jAM1DRaA]
+[2018-04-13T15:12:50,131][INFO ][o.e.n.Node               ] [node-3] version[6.2.3], pid[5708], build[c59ff00/2018-03-13T10:06:29.741383Z], OS[Mac OS X/10.13.4/x86_64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/1.8.0_121/25.121-b13]
+[2018-04-13T15:12:50,131][INFO ][o.e.n.Node               ] [node-3] JVM arguments [-Xms1g, -Xmx1g, -XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/var/folders/hr/c1f08q_n0msf4gp05cdnc04c0000gn/T/elasticsearch.ZtNHSq5M, -XX:+HeapDumpOnOutOfMemoryError, -XX:+PrintGCDetails, -XX:+PrintGCDateStamps, -XX:+PrintTenuringDistribution, -XX:+PrintGCApplicationStoppedTime, -Xloggc:logs/gc.log, -XX:+UseGCLogFileRotation, -XX:NumberOfGCLogFiles=32, -XX:GCLogFileSize=64m, -Des.path.home=/Users/wangwang/Repo/集群搭建/es/elasticsearch-6.2.3_3, -Des.path.conf=/Users/wangwang/Repo/集群搭建/es/elasticsearch-6.2.3_3/config]
+[2018-04-13T15:12:50,977][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [aggs-matrix-stats]
+[2018-04-13T15:12:50,977][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [analysis-common]
+[2018-04-13T15:12:50,977][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [ingest-common]
+[2018-04-13T15:12:50,977][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [lang-expression]
+[2018-04-13T15:12:50,977][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [lang-mustache]
+[2018-04-13T15:12:50,978][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [lang-painless]
+[2018-04-13T15:12:50,978][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [mapper-extras]
+[2018-04-13T15:12:50,978][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [parent-join]
+[2018-04-13T15:12:50,978][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [percolator]
+[2018-04-13T15:12:50,978][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [rank-eval]
+[2018-04-13T15:12:50,979][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [reindex]
+[2018-04-13T15:12:50,979][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [repository-url]
+[2018-04-13T15:12:50,979][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [transport-netty4]
+[2018-04-13T15:12:50,979][INFO ][o.e.p.PluginsService     ] [node-3] loaded module [tribe]
+[2018-04-13T15:12:50,979][INFO ][o.e.p.PluginsService     ] [node-3] no plugins loaded
+[2018-04-13T15:12:53,571][INFO ][o.e.d.DiscoveryModule    ] [node-3] using discovery type [zen]
+[2018-04-13T15:12:54,170][INFO ][o.e.n.Node               ] [node-3] initialized
+[2018-04-13T15:12:54,170][INFO ][o.e.n.Node               ] [node-3] starting ...
+[2018-04-13T15:12:54,344][INFO ][o.e.t.TransportService   ] [node-3] publish_address {192.168.101.184:9302}, bound_addresses {[::]:9302}
+[2018-04-13T15:12:54,355][INFO ][o.e.b.BootstrapChecks    ] [node-3] bound or publishing to a non-loopback address, enforcing bootstrap checks
+[2018-04-13T15:12:57,542][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:13:00,548][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:13:03,552][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:13:06,563][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:13:09,588][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:13:12,591][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:13:15,595][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:13:18,601][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:13:21,605][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:13:24,387][WARN ][o.e.n.Node               ] [node-3] timed out while waiting for initial discovery state - timeout: 30s
+[2018-04-13T15:13:24,405][INFO ][o.e.h.n.Netty4HttpServerTransport] [node-3] publish_address {192.168.101.184:9202}, bound_addresses {[::]:9202}
+[2018-04-13T15:13:24,405][INFO ][o.e.n.Node               ] [node-3] started
+[2018-04-13T15:13:24,608][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:13:27,614][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:13:30,617][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:13:33,621][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:13:36,625][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:13:39,628][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:13:42,631][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:13:45,635][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:13:48,641][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:13:51,644][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:13:54,647][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:13:57,650][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:14:00,656][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:14:03,659][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:14:06,664][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:14:09,667][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:14:12,672][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:14:15,674][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:14:18,684][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:14:21,685][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:14:24,690][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:14:27,692][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:14:30,697][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:14:33,701][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:14:36,705][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:14:39,710][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:14:42,718][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:14:45,721][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:14:47,710][INFO ][o.e.n.Node               ] [node-2] initializing ...
+[2018-04-13T15:14:47,741][ERROR][o.e.b.Bootstrap          ] Exception
+java.lang.IllegalStateException: failed to obtain node locks, tried [[/Users/wangwang/Repo/集群搭建/es/data/nex]] with lock id [0]; maybe these locations are not writable or multiple nodes were started without increasing [node.max_local_storage_nodes] (was [1])?
+	at org.elasticsearch.env.NodeEnvironment.<init>(NodeEnvironment.java:244) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.node.Node.<init>(Node.java:264) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.node.Node.<init>(Node.java:246) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:213) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:213) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:323) [elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:121) [elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:112) [elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:86) [elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:124) [elasticsearch-cli-6.2.3.jar:6.2.3]
+	at org.elasticsearch.cli.Command.main(Command.java:90) [elasticsearch-cli-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:92) [elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:85) [elasticsearch-6.2.3.jar:6.2.3]
+[2018-04-13T15:14:47,747][WARN ][o.e.b.ElasticsearchUncaughtExceptionHandler] [node-2] uncaught exception in thread [main]
+org.elasticsearch.bootstrap.StartupException: java.lang.IllegalStateException: failed to obtain node locks, tried [[/Users/wangwang/Repo/集群搭建/es/data/nex]] with lock id [0]; maybe these locations are not writable or multiple nodes were started without increasing [node.max_local_storage_nodes] (was [1])?
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:125) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:112) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:86) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:124) ~[elasticsearch-cli-6.2.3.jar:6.2.3]
+	at org.elasticsearch.cli.Command.main(Command.java:90) ~[elasticsearch-cli-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:92) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:85) ~[elasticsearch-6.2.3.jar:6.2.3]
+Caused by: java.lang.IllegalStateException: failed to obtain node locks, tried [[/Users/wangwang/Repo/集群搭建/es/data/nex]] with lock id [0]; maybe these locations are not writable or multiple nodes were started without increasing [node.max_local_storage_nodes] (was [1])?
+	at org.elasticsearch.env.NodeEnvironment.<init>(NodeEnvironment.java:244) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.node.Node.<init>(Node.java:264) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.node.Node.<init>(Node.java:246) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:213) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:213) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:323) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:121) ~[elasticsearch-6.2.3.jar:6.2.3]
+	... 6 more
+[2018-04-13T15:14:48,725][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:14:51,732][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:14:54,738][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:14:57,740][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:15:00,741][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:15:03,745][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:15:06,749][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:15:09,751][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:15:12,756][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:15:15,759][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:15:18,763][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:15:21,766][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:15:24,768][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:15:27,772][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:15:30,776][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:15:33,778][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:15:36,780][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:15:39,782][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:15:42,786][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:15:45,790][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:15:48,796][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:15:51,800][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:15:54,805][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:15:57,807][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:16:00,809][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:16:03,816][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:16:05,423][INFO ][o.e.n.Node               ] [node-2] initializing ...
+[2018-04-13T15:16:05,513][INFO ][o.e.e.NodeEnvironment    ] [node-2] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [263.7gb], net total_space [389.2gb], types [apfs]
+[2018-04-13T15:16:05,514][INFO ][o.e.e.NodeEnvironment    ] [node-2] heap size [990.7mb], compressed ordinary object pointers [true]
+[2018-04-13T15:16:05,518][INFO ][o.e.n.Node               ] [node-2] node name [node-2], node ID [KEPUoSGYQ-CzuGK7kS4iSA]
+[2018-04-13T15:16:05,518][INFO ][o.e.n.Node               ] [node-2] version[6.2.3], pid[5776], build[c59ff00/2018-03-13T10:06:29.741383Z], OS[Mac OS X/10.13.4/x86_64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/1.8.0_121/25.121-b13]
+[2018-04-13T15:16:05,518][INFO ][o.e.n.Node               ] [node-2] JVM arguments [-Xms1g, -Xmx1g, -XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/var/folders/hr/c1f08q_n0msf4gp05cdnc04c0000gn/T/elasticsearch.XZd9xKT6, -XX:+HeapDumpOnOutOfMemoryError, -XX:+PrintGCDetails, -XX:+PrintGCDateStamps, -XX:+PrintTenuringDistribution, -XX:+PrintGCApplicationStoppedTime, -Xloggc:logs/gc.log, -XX:+UseGCLogFileRotation, -XX:NumberOfGCLogFiles=32, -XX:GCLogFileSize=64m, -Des.path.home=/Users/wangwang/Repo/集群搭建/es/elasticsearch-6.2.3_2, -Des.path.conf=/Users/wangwang/Repo/集群搭建/es/elasticsearch-6.2.3_2/config]
+[2018-04-13T15:16:06,435][INFO ][o.e.p.PluginsService     ] [node-2] loaded module [aggs-matrix-stats]
+[2018-04-13T15:16:06,435][INFO ][o.e.p.PluginsService     ] [node-2] loaded module [analysis-common]
+[2018-04-13T15:16:06,436][INFO ][o.e.p.PluginsService     ] [node-2] loaded module [ingest-common]
+[2018-04-13T15:16:06,436][INFO ][o.e.p.PluginsService     ] [node-2] loaded module [lang-expression]
+[2018-04-13T15:16:06,436][INFO ][o.e.p.PluginsService     ] [node-2] loaded module [lang-mustache]
+[2018-04-13T15:16:06,436][INFO ][o.e.p.PluginsService     ] [node-2] loaded module [lang-painless]
+[2018-04-13T15:16:06,436][INFO ][o.e.p.PluginsService     ] [node-2] loaded module [mapper-extras]
+[2018-04-13T15:16:06,437][INFO ][o.e.p.PluginsService     ] [node-2] loaded module [parent-join]
+[2018-04-13T15:16:06,437][INFO ][o.e.p.PluginsService     ] [node-2] loaded module [percolator]
+[2018-04-13T15:16:06,437][INFO ][o.e.p.PluginsService     ] [node-2] loaded module [rank-eval]
+[2018-04-13T15:16:06,437][INFO ][o.e.p.PluginsService     ] [node-2] loaded module [reindex]
+[2018-04-13T15:16:06,437][INFO ][o.e.p.PluginsService     ] [node-2] loaded module [repository-url]
+[2018-04-13T15:16:06,437][INFO ][o.e.p.PluginsService     ] [node-2] loaded module [transport-netty4]
+[2018-04-13T15:16:06,437][INFO ][o.e.p.PluginsService     ] [node-2] loaded module [tribe]
+[2018-04-13T15:16:06,438][INFO ][o.e.p.PluginsService     ] [node-2] no plugins loaded
+[2018-04-13T15:16:06,821][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:16:09,260][INFO ][o.e.d.DiscoveryModule    ] [node-2] using discovery type [zen]
+[2018-04-13T15:16:09,823][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] not enough master nodes discovered during pinging (found [[Candidate{node={node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, clusterStateVersion=-1}]], but needed [2]), pinging again
+[2018-04-13T15:16:09,848][INFO ][o.e.n.Node               ] [node-2] initialized
+[2018-04-13T15:16:09,848][INFO ][o.e.n.Node               ] [node-2] starting ...
+[2018-04-13T15:16:10,165][INFO ][o.e.t.TransportService   ] [node-2] publish_address {192.168.101.184:9301}, bound_addresses {[::]:9301}
+[2018-04-13T15:16:10,176][INFO ][o.e.b.BootstrapChecks    ] [node-2] bound or publishing to a non-loopback address, enforcing bootstrap checks
+[2018-04-13T15:16:13,290][INFO ][o.e.c.s.MasterService    ] [node-2] zen-disco-elected-as-master ([1] nodes joined)[{node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}], reason: new_master {node-2}{KEPUoSGYQ-CzuGK7kS4iSA}{IR6lb83yTSSiI8Z2AiMFpg}{192.168.101.184}{192.168.101.184:9301}, added {{node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302},}
+[2018-04-13T15:16:13,407][INFO ][o.e.c.s.ClusterApplierService] [node-3] detected_master {node-2}{KEPUoSGYQ-CzuGK7kS4iSA}{IR6lb83yTSSiI8Z2AiMFpg}{192.168.101.184}{192.168.101.184:9301}, added {{node-2}{KEPUoSGYQ-CzuGK7kS4iSA}{IR6lb83yTSSiI8Z2AiMFpg}{192.168.101.184}{192.168.101.184:9301},}, reason: apply cluster state (from master [master {node-2}{KEPUoSGYQ-CzuGK7kS4iSA}{IR6lb83yTSSiI8Z2AiMFpg}{192.168.101.184}{192.168.101.184:9301} committed version [1]])
+[2018-04-13T15:16:13,456][INFO ][o.e.c.s.ClusterApplierService] [node-2] new_master {node-2}{KEPUoSGYQ-CzuGK7kS4iSA}{IR6lb83yTSSiI8Z2AiMFpg}{192.168.101.184}{192.168.101.184:9301}, added {{node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302},}, reason: apply cluster state (from master [master {node-2}{KEPUoSGYQ-CzuGK7kS4iSA}{IR6lb83yTSSiI8Z2AiMFpg}{192.168.101.184}{192.168.101.184:9301} committed version [1] source [zen-disco-elected-as-master ([1] nodes joined)[{node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}]]])
+[2018-04-13T15:16:13,495][INFO ][o.e.h.n.Netty4HttpServerTransport] [node-2] publish_address {192.168.101.184:9201}, bound_addresses {[::]:9201}
+[2018-04-13T15:16:13,496][INFO ][o.e.n.Node               ] [node-2] started
+[2018-04-13T15:16:13,587][INFO ][o.e.g.GatewayService     ] [node-2] recovered [0] indices into cluster_state
+[2018-04-13T15:16:22,512][INFO ][o.e.n.Node               ] [node-1] initializing ...
+[2018-04-13T15:16:22,603][INFO ][o.e.e.NodeEnvironment    ] [node-1] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [263.7gb], net total_space [389.2gb], types [apfs]
+[2018-04-13T15:16:22,604][INFO ][o.e.e.NodeEnvironment    ] [node-1] heap size [990.7mb], compressed ordinary object pointers [true]
+[2018-04-13T15:16:22,605][INFO ][o.e.n.Node               ] [node-1] node name [node-1], node ID [xUMX1U-iTmiqbTUWdv2rqw]
+[2018-04-13T15:16:22,606][INFO ][o.e.n.Node               ] [node-1] version[6.2.3], pid[5804], build[c59ff00/2018-03-13T10:06:29.741383Z], OS[Mac OS X/10.13.4/x86_64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/1.8.0_121/25.121-b13]
+[2018-04-13T15:16:22,606][INFO ][o.e.n.Node               ] [node-1] JVM arguments [-Xms1g, -Xmx1g, -XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/var/folders/hr/c1f08q_n0msf4gp05cdnc04c0000gn/T/elasticsearch.bFDOsnxu, -XX:+HeapDumpOnOutOfMemoryError, -XX:+PrintGCDetails, -XX:+PrintGCDateStamps, -XX:+PrintTenuringDistribution, -XX:+PrintGCApplicationStoppedTime, -Xloggc:logs/gc.log, -XX:+UseGCLogFileRotation, -XX:NumberOfGCLogFiles=32, -XX:GCLogFileSize=64m, -Des.path.home=/Users/wangwang/Repo/集群搭建/es/elasticsearch-6.2.3_1, -Des.path.conf=/Users/wangwang/Repo/集群搭建/es/elasticsearch-6.2.3_1/config]
+[2018-04-13T15:16:23,628][INFO ][o.e.p.PluginsService     ] [node-1] loaded module [aggs-matrix-stats]
+[2018-04-13T15:16:23,628][INFO ][o.e.p.PluginsService     ] [node-1] loaded module [analysis-common]
+[2018-04-13T15:16:23,629][INFO ][o.e.p.PluginsService     ] [node-1] loaded module [ingest-common]
+[2018-04-13T15:16:23,629][INFO ][o.e.p.PluginsService     ] [node-1] loaded module [lang-expression]
+[2018-04-13T15:16:23,629][INFO ][o.e.p.PluginsService     ] [node-1] loaded module [lang-mustache]
+[2018-04-13T15:16:23,630][INFO ][o.e.p.PluginsService     ] [node-1] loaded module [lang-painless]
+[2018-04-13T15:16:23,630][INFO ][o.e.p.PluginsService     ] [node-1] loaded module [mapper-extras]
+[2018-04-13T15:16:23,630][INFO ][o.e.p.PluginsService     ] [node-1] loaded module [parent-join]
+[2018-04-13T15:16:23,630][INFO ][o.e.p.PluginsService     ] [node-1] loaded module [percolator]
+[2018-04-13T15:16:23,630][INFO ][o.e.p.PluginsService     ] [node-1] loaded module [rank-eval]
+[2018-04-13T15:16:23,630][INFO ][o.e.p.PluginsService     ] [node-1] loaded module [reindex]
+[2018-04-13T15:16:23,630][INFO ][o.e.p.PluginsService     ] [node-1] loaded module [repository-url]
+[2018-04-13T15:16:23,630][INFO ][o.e.p.PluginsService     ] [node-1] loaded module [transport-netty4]
+[2018-04-13T15:16:23,631][INFO ][o.e.p.PluginsService     ] [node-1] loaded module [tribe]
+[2018-04-13T15:16:23,631][INFO ][o.e.p.PluginsService     ] [node-1] no plugins loaded
+[2018-04-13T15:16:26,694][INFO ][o.e.d.DiscoveryModule    ] [node-1] using discovery type [zen]
+[2018-04-13T15:16:27,299][INFO ][o.e.n.Node               ] [node-1] initialized
+[2018-04-13T15:16:27,299][INFO ][o.e.n.Node               ] [node-1] starting ...
+[2018-04-13T15:16:27,722][INFO ][o.e.t.TransportService   ] [node-1] publish_address {192.168.101.184:9300}, bound_addresses {[::]:9300}
+[2018-04-13T15:16:27,742][INFO ][o.e.b.BootstrapChecks    ] [node-1] bound or publishing to a non-loopback address, enforcing bootstrap checks
+[2018-04-13T15:16:30,958][INFO ][o.e.c.s.MasterService    ] [node-2] zen-disco-node-join[{node-1}{xUMX1U-iTmiqbTUWdv2rqw}{rWX8f-BgQSioJg4Np0TwDw}{192.168.101.184}{192.168.101.184:9300}], reason: added {{node-1}{xUMX1U-iTmiqbTUWdv2rqw}{rWX8f-BgQSioJg4Np0TwDw}{192.168.101.184}{192.168.101.184:9300},}
+[2018-04-13T15:16:30,971][INFO ][o.e.c.s.ClusterApplierService] [node-3] added {{node-1}{xUMX1U-iTmiqbTUWdv2rqw}{rWX8f-BgQSioJg4Np0TwDw}{192.168.101.184}{192.168.101.184:9300},}, reason: apply cluster state (from master [master {node-2}{KEPUoSGYQ-CzuGK7kS4iSA}{IR6lb83yTSSiI8Z2AiMFpg}{192.168.101.184}{192.168.101.184:9301} committed version [3]])
+[2018-04-13T15:16:31,022][INFO ][o.e.c.s.ClusterApplierService] [node-1] detected_master {node-2}{KEPUoSGYQ-CzuGK7kS4iSA}{IR6lb83yTSSiI8Z2AiMFpg}{192.168.101.184}{192.168.101.184:9301}, added {{node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302},{node-2}{KEPUoSGYQ-CzuGK7kS4iSA}{IR6lb83yTSSiI8Z2AiMFpg}{192.168.101.184}{192.168.101.184:9301},}, reason: apply cluster state (from master [master {node-2}{KEPUoSGYQ-CzuGK7kS4iSA}{IR6lb83yTSSiI8Z2AiMFpg}{192.168.101.184}{192.168.101.184:9301} committed version [3]])
+[2018-04-13T15:16:31,057][INFO ][o.e.c.s.ClusterApplierService] [node-2] added {{node-1}{xUMX1U-iTmiqbTUWdv2rqw}{rWX8f-BgQSioJg4Np0TwDw}{192.168.101.184}{192.168.101.184:9300},}, reason: apply cluster state (from master [master {node-2}{KEPUoSGYQ-CzuGK7kS4iSA}{IR6lb83yTSSiI8Z2AiMFpg}{192.168.101.184}{192.168.101.184:9301} committed version [3] source [zen-disco-node-join[{node-1}{xUMX1U-iTmiqbTUWdv2rqw}{rWX8f-BgQSioJg4Np0TwDw}{192.168.101.184}{192.168.101.184:9300}]]])
+[2018-04-13T15:16:31,076][INFO ][o.e.h.n.Netty4HttpServerTransport] [node-1] publish_address {192.168.101.184:9200}, bound_addresses {[::]:9200}
+[2018-04-13T15:16:31,076][INFO ][o.e.n.Node               ] [node-1] started
+[2018-04-13T15:23:44,504][INFO ][o.e.n.Node               ] [node-2] stopping ...
+[2018-04-13T15:23:44,557][INFO ][o.e.d.z.ZenDiscovery     ] [node-3] master_left [{node-2}{KEPUoSGYQ-CzuGK7kS4iSA}{IR6lb83yTSSiI8Z2AiMFpg}{192.168.101.184}{192.168.101.184:9301}], reason [shut_down]
+[2018-04-13T15:23:44,559][INFO ][o.e.d.z.ZenDiscovery     ] [node-3] master_left [{node-2}{KEPUoSGYQ-CzuGK7kS4iSA}{IR6lb83yTSSiI8Z2AiMFpg}{192.168.101.184}{192.168.101.184:9301}], reason [transport disconnected]
+[2018-04-13T15:23:44,567][WARN ][o.e.d.z.ZenDiscovery     ] [node-3] master left (reason = shut_down), current nodes: nodes: 
+   {node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, local
+   {node-2}{KEPUoSGYQ-CzuGK7kS4iSA}{IR6lb83yTSSiI8Z2AiMFpg}{192.168.101.184}{192.168.101.184:9301}, master
+   {node-1}{xUMX1U-iTmiqbTUWdv2rqw}{rWX8f-BgQSioJg4Np0TwDw}{192.168.101.184}{192.168.101.184:9300}
+
+[2018-04-13T15:23:44,579][INFO ][o.e.d.z.ZenDiscovery     ] [node-1] master_left [{node-2}{KEPUoSGYQ-CzuGK7kS4iSA}{IR6lb83yTSSiI8Z2AiMFpg}{192.168.101.184}{192.168.101.184:9301}], reason [transport disconnected]
+[2018-04-13T15:23:44,583][WARN ][o.e.d.z.ZenDiscovery     ] [node-1] master left (reason = transport disconnected), current nodes: nodes: 
+   {node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}
+   {node-2}{KEPUoSGYQ-CzuGK7kS4iSA}{IR6lb83yTSSiI8Z2AiMFpg}{192.168.101.184}{192.168.101.184:9301}, master
+   {node-1}{xUMX1U-iTmiqbTUWdv2rqw}{rWX8f-BgQSioJg4Np0TwDw}{192.168.101.184}{192.168.101.184:9300}, local
+
+[2018-04-13T15:23:44,631][INFO ][o.e.n.Node               ] [node-2] stopped
+[2018-04-13T15:23:44,633][INFO ][o.e.n.Node               ] [node-2] closing ...
+[2018-04-13T15:23:44,541][INFO ][o.e.d.z.ZenDiscovery     ] [node-1] master_left [{node-2}{KEPUoSGYQ-CzuGK7kS4iSA}{IR6lb83yTSSiI8Z2AiMFpg}{192.168.101.184}{192.168.101.184:9301}], reason [shut_down]
+[2018-04-13T15:23:44,645][WARN ][o.e.t.n.Netty4Transport  ] [node-1] send message failed [channel: NettyTcpChannel{localAddress=0.0.0.0/0.0.0.0:9300, remoteAddress=/192.168.101.184:65223}]
+java.nio.channels.ClosedChannelException: null
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source) ~[?:?]
+[2018-04-13T15:23:44,654][WARN ][o.e.t.n.Netty4Transport  ] [node-3] send message failed [channel: NettyTcpChannel{localAddress=0.0.0.0/0.0.0.0:9302, remoteAddress=/192.168.101.184:65186}]
+java.nio.channels.ClosedChannelException: null
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(...)(Unknown Source) ~[?:?]
+[2018-04-13T15:23:44,615][WARN ][o.e.c.NodeConnectionsService] [node-1] failed to connect to node {node-2}{KEPUoSGYQ-CzuGK7kS4iSA}{IR6lb83yTSSiI8Z2AiMFpg}{192.168.101.184}{192.168.101.184:9301} (tried [1] times)
+org.elasticsearch.transport.ConnectTransportException: [node-2][192.168.101.184:9301] connect_exception
+	at org.elasticsearch.transport.TcpChannel.awaitConnected(TcpChannel.java:165) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.transport.TcpTransport.openConnection(TcpTransport.java:616) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.transport.TcpTransport.connectToNode(TcpTransport.java:513) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:331) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:318) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.cluster.NodeConnectionsService.validateAndConnectIfNeeded(NodeConnectionsService.java:154) [elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.cluster.NodeConnectionsService$1.doRun(NodeConnectionsService.java:107) [elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.common.util.concurrent.ThreadContext$ContextPreservingAbstractRunnable.doRun(ThreadContext.java:672) [elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37) [elasticsearch-6.2.3.jar:6.2.3]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_121]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_121]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_121]
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: 192.168.101.184/192.168.101.184:9301
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[?:?]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[?:?]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323) ~[?:?]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340) ~[?:?]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633) ~[?:?]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:545) ~[?:?]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:499) ~[?:?]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459) ~[?:?]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858) ~[?:?]
+	... 1 more
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[?:?]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[?:?]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323) ~[?:?]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340) ~[?:?]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633) ~[?:?]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:545) ~[?:?]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:499) ~[?:?]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459) ~[?:?]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858) ~[?:?]
+	... 1 more
+[2018-04-13T15:23:44,656][WARN ][o.e.c.NodeConnectionsService] [node-3] failed to connect to node {node-2}{KEPUoSGYQ-CzuGK7kS4iSA}{IR6lb83yTSSiI8Z2AiMFpg}{192.168.101.184}{192.168.101.184:9301} (tried [1] times)
+org.elasticsearch.transport.ConnectTransportException: [node-2][192.168.101.184:9301] connect_exception
+	at org.elasticsearch.transport.TcpChannel.awaitConnected(TcpChannel.java:165) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.transport.TcpTransport.openConnection(TcpTransport.java:616) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.transport.TcpTransport.connectToNode(TcpTransport.java:513) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:331) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.transport.TransportService.connectToNode(TransportService.java:318) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.cluster.NodeConnectionsService.validateAndConnectIfNeeded(NodeConnectionsService.java:154) [elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.cluster.NodeConnectionsService$1.doRun(NodeConnectionsService.java:107) [elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.common.util.concurrent.ThreadContext$ContextPreservingAbstractRunnable.doRun(ThreadContext.java:672) [elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37) [elasticsearch-6.2.3.jar:6.2.3]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_121]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_121]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_121]
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: 192.168.101.184/192.168.101.184:9301
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[?:?]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[?:?]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323) ~[?:?]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340) ~[?:?]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633) ~[?:?]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:545) ~[?:?]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:499) ~[?:?]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459) ~[?:?]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858) ~[?:?]
+	... 1 more
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[?:?]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[?:?]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:323) ~[?:?]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340) ~[?:?]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633) ~[?:?]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:545) ~[?:?]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:499) ~[?:?]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459) ~[?:?]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858) ~[?:?]
+	... 1 more
+[2018-04-13T15:23:44,697][INFO ][o.e.n.Node               ] [node-2] closed
+[2018-04-13T15:23:47,669][INFO ][o.e.c.s.MasterService    ] [node-3] zen-disco-elected-as-master ([1] nodes joined)[{node-1}{xUMX1U-iTmiqbTUWdv2rqw}{rWX8f-BgQSioJg4Np0TwDw}{192.168.101.184}{192.168.101.184:9300}], reason: new_master {node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}
+[2018-04-13T15:23:47,690][INFO ][o.e.c.s.ClusterApplierService] [node-1] detected_master {node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, reason: apply cluster state (from master [master {node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302} committed version [4]])
+[2018-04-13T15:23:47,703][INFO ][o.e.c.s.ClusterApplierService] [node-3] new_master {node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, reason: apply cluster state (from master [master {node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302} committed version [4] source [zen-disco-elected-as-master ([1] nodes joined)[{node-1}{xUMX1U-iTmiqbTUWdv2rqw}{rWX8f-BgQSioJg4Np0TwDw}{192.168.101.184}{192.168.101.184:9300}]]])
+[2018-04-13T15:23:47,716][INFO ][o.e.c.s.MasterService    ] [node-3] zen-disco-node-failed({node-2}{KEPUoSGYQ-CzuGK7kS4iSA}{IR6lb83yTSSiI8Z2AiMFpg}{192.168.101.184}{192.168.101.184:9301}), reason(transport disconnected)[{node-2}{KEPUoSGYQ-CzuGK7kS4iSA}{IR6lb83yTSSiI8Z2AiMFpg}{192.168.101.184}{192.168.101.184:9301} transport disconnected], reason: removed {{node-2}{KEPUoSGYQ-CzuGK7kS4iSA}{IR6lb83yTSSiI8Z2AiMFpg}{192.168.101.184}{192.168.101.184:9301},}
+[2018-04-13T15:23:47,745][INFO ][o.e.c.s.ClusterApplierService] [node-1] removed {{node-2}{KEPUoSGYQ-CzuGK7kS4iSA}{IR6lb83yTSSiI8Z2AiMFpg}{192.168.101.184}{192.168.101.184:9301},}, reason: apply cluster state (from master [master {node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302} committed version [5]])
+[2018-04-13T15:23:47,744][DEBUG][o.e.a.a.c.n.s.TransportNodesStatsAction] [node-3] failed to execute on node [KEPUoSGYQ-CzuGK7kS4iSA]
+org.elasticsearch.transport.NodeNotConnectedException: [node-2][192.168.101.184:9301] Node not connected
+	at org.elasticsearch.transport.TcpTransport.getConnection(TcpTransport.java:693) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.transport.TcpTransport.getConnection(TcpTransport.java:122) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.transport.TransportService.getConnection(TransportService.java:529) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:505) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.action.support.nodes.TransportNodesAction$AsyncAction.start(TransportNodesAction.java:197) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.action.support.nodes.TransportNodesAction.doExecute(TransportNodesAction.java:89) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.action.support.nodes.TransportNodesAction.doExecute(TransportNodesAction.java:52) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.action.support.TransportAction$RequestFilterChain.proceed(TransportAction.java:167) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.action.support.TransportAction.execute(TransportAction.java:139) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.action.support.TransportAction.execute(TransportAction.java:81) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.client.node.NodeClient.executeLocally(NodeClient.java:83) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.client.node.NodeClient.doExecute(NodeClient.java:72) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.client.support.AbstractClient.execute(AbstractClient.java:405) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.client.support.AbstractClient$ClusterAdmin.execute(AbstractClient.java:712) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.client.support.AbstractClient$ClusterAdmin.nodesStats(AbstractClient.java:808) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.cluster.InternalClusterInfoService.updateNodeStats(InternalClusterInfoService.java:254) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.cluster.InternalClusterInfoService.refresh(InternalClusterInfoService.java:290) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.cluster.InternalClusterInfoService.maybeRefresh(InternalClusterInfoService.java:275) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.cluster.InternalClusterInfoService.lambda$onMaster$0(InternalClusterInfoService.java:140) ~[elasticsearch-6.2.3.jar:6.2.3]
+	at org.elasticsearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:573) [elasticsearch-6.2.3.jar:6.2.3]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_121]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_121]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_121]
+[2018-04-13T15:23:47,755][INFO ][o.e.c.s.ClusterApplierService] [node-3] removed {{node-2}{KEPUoSGYQ-CzuGK7kS4iSA}{IR6lb83yTSSiI8Z2AiMFpg}{192.168.101.184}{192.168.101.184:9301},}, reason: apply cluster state (from master [master {node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302} committed version [5] source [zen-disco-node-failed({node-2}{KEPUoSGYQ-CzuGK7kS4iSA}{IR6lb83yTSSiI8Z2AiMFpg}{192.168.101.184}{192.168.101.184:9301}), reason(transport disconnected)[{node-2}{KEPUoSGYQ-CzuGK7kS4iSA}{IR6lb83yTSSiI8Z2AiMFpg}{192.168.101.184}{192.168.101.184:9301} transport disconnected]]])
+[2018-04-13T15:23:48,121][INFO ][o.e.n.Node               ] [node-3] stopping ...
+[2018-04-13T15:23:48,136][INFO ][o.e.d.z.ZenDiscovery     ] [node-1] master_left [{node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}], reason [shut_down]
+[2018-04-13T15:23:48,136][WARN ][o.e.d.z.ZenDiscovery     ] [node-1] master left (reason = shut_down), current nodes: nodes: 
+   {node-3}{OZwgRpwRSJGNf6jAM1DRaA}{7Ow3LaRQQROpxQlt64mtNw}{192.168.101.184}{192.168.101.184:9302}, master
+   {node-1}{xUMX1U-iTmiqbTUWdv2rqw}{rWX8f-BgQSioJg4Np0TwDw}{192.168.101.184}{192.168.101.184:9300}, local
+
+[2018-04-13T15:23:48,160][INFO ][o.e.n.Node               ] [node-3] stopped
+[2018-04-13T15:23:48,161][INFO ][o.e.n.Node               ] [node-3] closing ...
+[2018-04-13T15:23:48,177][INFO ][o.e.n.Node               ] [node-3] closed
+[2018-04-13T15:23:51,828][INFO ][o.e.n.Node               ] [node-1] stopping ...
+[2018-04-13T15:23:51,850][INFO ][o.e.n.Node               ] [node-1] stopped
+[2018-04-13T15:23:51,850][INFO ][o.e.n.Node               ] [node-1] closing ...
+[2018-04-13T15:23:51,861][INFO ][o.e.n.Node               ] [node-1] closed

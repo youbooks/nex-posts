@@ -1,0 +1,14 @@
+cluster.name: nex
+node.name: node-3
+node.master: true
+node.data: true
+network.host: 0.0.0.0
+http.port: 9202
+transport.tcp.port: 9302
+discovery.zen.minimum_master_nodes: 2
+discovery.zen.ping.unicast.hosts: ["0.0.0.0:9300", "0.0.0.0:9301", "0.0.0.0:9302"]
+gateway.recover_after_nodes: 2
+gateway.recover_after_time: 5m
+gateway.expected_nodes: 1
+http.cors.enabled: true
+http.cors.allow-origin: "*"

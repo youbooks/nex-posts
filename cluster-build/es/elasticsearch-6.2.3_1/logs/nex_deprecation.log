@@ -1,0 +1,2 @@
+[2018-04-13T15:40:21,699][WARN ][o.e.d.a.a.i.t.p.PutIndexTemplateRequest] Deprecated field [template] used, replaced by [index_patterns]
+[2018-04-13T15:40:22,096][WARN ][o.e.d.i.m.AllFieldMapper ] [_all] is deprecated in 6.0+ and will be removed in 7.0. As a replacement, you can use [copy_to] on mapping fields to create your own catch all field.

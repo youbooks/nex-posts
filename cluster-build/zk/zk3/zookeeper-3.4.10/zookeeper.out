@@ -1,0 +1,50 @@
+2018-04-20 11:53:10,607 [myid:] - INFO  [main:QuorumPeerConfig@134] - Reading configuration from: /Users/wangwang/Repo/post/cluster-build/zk/zk3/zookeeper-3.4.10/bin/../conf/zoo.cfg
+2018-04-20 11:53:10,638 [myid:] - INFO  [main:QuorumPeer$QuorumServer@167] - Resolved hostname: 127.0.0.1 to address: /127.0.0.1
+2018-04-20 11:53:10,638 [myid:] - INFO  [main:QuorumPeer$QuorumServer@167] - Resolved hostname: 127.0.0.1 to address: /127.0.0.1
+2018-04-20 11:53:10,639 [myid:] - INFO  [main:QuorumPeer$QuorumServer@167] - Resolved hostname: 127.0.0.1 to address: /127.0.0.1
+2018-04-20 11:53:10,639 [myid:] - INFO  [main:QuorumPeerConfig@396] - Defaulting to majority quorums
+2018-04-20 11:53:10,645 [myid:3] - INFO  [main:DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2018-04-20 11:53:10,645 [myid:3] - INFO  [main:DatadirCleanupManager@79] - autopurge.purgeInterval set to 0
+2018-04-20 11:53:10,646 [myid:3] - INFO  [main:DatadirCleanupManager@101] - Purge task is not scheduled.
+2018-04-20 11:53:10,675 [myid:3] - INFO  [main:QuorumPeerMain@127] - Starting quorum peer
+2018-04-20 11:53:10,720 [myid:3] - INFO  [main:NIOServerCnxnFactory@89] - binding to port 0.0.0.0/0.0.0.0:2183
+2018-04-20 11:53:10,763 [myid:3] - INFO  [main:QuorumPeer@1134] - minSessionTimeout set to -1
+2018-04-20 11:53:10,763 [myid:3] - INFO  [main:QuorumPeer@1145] - maxSessionTimeout set to -1
+2018-04-20 11:53:10,763 [myid:3] - INFO  [main:QuorumPeer@1419] - QuorumPeer communication is not secured!
+2018-04-20 11:53:10,764 [myid:3] - INFO  [main:QuorumPeer@1448] - quorum.cnxn.threads.size set to 20
+2018-04-20 11:53:10,772 [myid:3] - INFO  [main:FileSnap@83] - Reading snapshot /Users/wangwang/Repo/post/cluster-build/zk/zk3/data/version-2/snapshot.700000000
+2018-04-20 11:53:10,786 [myid:3] - INFO  [ListenerThread:QuorumCnxManager$Listener@739] - My election bind port: /127.0.0.1:3890
+2018-04-20 11:53:10,800 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:QuorumPeer@865] - LOOKING
+2018-04-20 11:53:10,803 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:FastLeaderElection@818] - New election. My id =  3, proposed zxid=0x700000000
+2018-04-20 11:53:10,814 [myid:3] - INFO  [WorkerReceiver[myid=3]:FastLeaderElection@600] - Notification: 1 (message format version), 1 (n.leader), 0x700000000 (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x7 (n.peerEpoch) LOOKING (my state)
+2018-04-20 11:53:10,815 [myid:3] - INFO  [WorkerReceiver[myid=3]:FastLeaderElection@600] - Notification: 1 (message format version), 1 (n.leader), 0x700000000 (n.zxid), 0x1 (n.round), LEADING (n.state), 1 (n.sid), 0x8 (n.peerEpoch) LOOKING (my state)
+2018-04-20 11:53:10,816 [myid:3] - INFO  [WorkerReceiver[myid=3]:FastLeaderElection@600] - Notification: 1 (message format version), 3 (n.leader), 0x700000000 (n.zxid), 0x1 (n.round), LOOKING (n.state), 3 (n.sid), 0x7 (n.peerEpoch) LOOKING (my state)
+2018-04-20 11:53:10,819 [myid:3] - INFO  [WorkerReceiver[myid=3]:FastLeaderElection@600] - Notification: 1 (message format version), 1 (n.leader), 0x700000000 (n.zxid), 0x1 (n.round), LOOKING (n.state), 2 (n.sid), 0x7 (n.peerEpoch) LOOKING (my state)
+2018-04-20 11:53:10,821 [myid:3] - INFO  [WorkerReceiver[myid=3]:FastLeaderElection@600] - Notification: 1 (message format version), 1 (n.leader), 0x700000000 (n.zxid), 0x1 (n.round), FOLLOWING (n.state), 2 (n.sid), 0x8 (n.peerEpoch) LOOKING (my state)
+2018-04-20 11:53:10,821 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:QuorumPeer@935] - FOLLOWING
+2018-04-20 11:53:10,825 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:Learner@86] - TCP NoDelay set to: true
+2018-04-20 11:53:10,831 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:Environment@100] - Server environment:zookeeper.version=3.4.10-39d3a4f269333c922ed3db283be479f9deacaa0f, built on 03/23/2017 10:13 GMT
+2018-04-20 11:53:10,831 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:Environment@100] - Server environment:host.name=wangwangdembp
+2018-04-20 11:53:10,831 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:Environment@100] - Server environment:java.version=1.8.0_121
+2018-04-20 11:53:10,831 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:Environment@100] - Server environment:java.vendor=Oracle Corporation
+2018-04-20 11:53:10,831 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:Environment@100] - Server environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre
+2018-04-20 11:53:10,831 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:Environment@100] - Server environment:java.class.path=/Users/wangwang/Repo/post/cluster-build/zk/zk3/zookeeper-3.4.10/bin/../build/classes:/Users/wangwang/Repo/post/cluster-build/zk/zk3/zookeeper-3.4.10/bin/../build/lib/*.jar:/Users/wangwang/Repo/post/cluster-build/zk/zk3/zookeeper-3.4.10/bin/../lib/slf4j-log4j12-1.6.1.jar:/Users/wangwang/Repo/post/cluster-build/zk/zk3/zookeeper-3.4.10/bin/../lib/slf4j-api-1.6.1.jar:/Users/wangwang/Repo/post/cluster-build/zk/zk3/zookeeper-3.4.10/bin/../lib/netty-3.10.5.Final.jar:/Users/wangwang/Repo/post/cluster-build/zk/zk3/zookeeper-3.4.10/bin/../lib/log4j-1.2.16.jar:/Users/wangwang/Repo/post/cluster-build/zk/zk3/zookeeper-3.4.10/bin/../lib/jline-0.9.94.jar:/Users/wangwang/Repo/post/cluster-build/zk/zk3/zookeeper-3.4.10/bin/../zookeeper-3.4.10.jar:/Users/wangwang/Repo/post/cluster-build/zk/zk3/zookeeper-3.4.10/bin/../src/java/lib/*.jar:/Users/wangwang/Repo/post/cluster-build/zk/zk3/zookeeper-3.4.10/bin/../conf:
+2018-04-20 11:53:10,831 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:Environment@100] - Server environment:java.library.path=/Users/wangwang/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2018-04-20 11:53:10,831 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:Environment@100] - Server environment:java.io.tmpdir=/var/folders/hr/c1f08q_n0msf4gp05cdnc04c0000gn/T/
+2018-04-20 11:53:10,831 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:Environment@100] - Server environment:java.compiler=<NA>
+2018-04-20 11:53:10,831 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:Environment@100] - Server environment:os.name=Mac OS X
+2018-04-20 11:53:10,831 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:Environment@100] - Server environment:os.arch=x86_64
+2018-04-20 11:53:10,832 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:Environment@100] - Server environment:os.version=10.13.4
+2018-04-20 11:53:10,832 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:Environment@100] - Server environment:user.name=wangwang
+2018-04-20 11:53:10,832 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:Environment@100] - Server environment:user.home=/Users/wangwang
+2018-04-20 11:53:10,832 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:Environment@100] - Server environment:user.dir=/Users/wangwang/Repo/post/cluster-build/zk/zk3/zookeeper-3.4.10
+2018-04-20 11:53:10,834 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:ZooKeeperServer@173] - Created server with tickTime 2000 minSessionTimeout 4000 maxSessionTimeout 40000 datadir /Users/wangwang/Repo/post/cluster-build/zk/zk3/dataLog/version-2 snapdir /Users/wangwang/Repo/post/cluster-build/zk/zk3/data/version-2
+2018-04-20 11:53:10,834 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:Follower@64] - FOLLOWING - LEADER ELECTION TOOK - 31
+2018-04-20 11:53:10,835 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:QuorumPeer$QuorumServer@167] - Resolved hostname: 127.0.0.1 to address: /127.0.0.1
+2018-04-20 11:53:10,842 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:Learner@336] - Getting a snapshot from leader
+2018-04-20 11:53:10,846 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:FileTxnSnapLog@248] - Snapshotting: 0x800000000 to /Users/wangwang/Repo/post/cluster-build/zk/zk3/data/version-2/snapshot.800000000
+2018-04-20 11:53:18,752 [myid:3] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2183:NIOServerCnxnFactory@192] - Accepted socket connection from /127.0.0.1:65241
+2018-04-20 11:53:18,762 [myid:3] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2183:ServerCnxn@318] - The list of known four letter word commands is : [{1936881266=srvr, 1937006964=stat, 2003003491=wchc, 1685417328=dump, 1668445044=crst, 1936880500=srst, 1701738089=envi, 1668247142=conf, 2003003507=wchs, 2003003504=wchp, 1668247155=cons, 1835955314=mntr, 1769173615=isro, 1920298859=ruok, 1735683435=gtmk, 1937010027=stmk}]
+2018-04-20 11:53:18,762 [myid:3] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2183:ServerCnxn@319] - The list of enabled four letter word commands is : [[wchs, stat, stmk, conf, ruok, mntr, srvr, envi, srst, isro, dump, gtmk, crst, cons]]
+2018-04-20 11:53:18,762 [myid:3] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2183:NIOServerCnxn@883] - Processing srvr command from /127.0.0.1:65241
+2018-04-20 11:53:18,766 [myid:3] - INFO  [Thread-1:NIOServerCnxn@1044] - Closed socket connection for client /127.0.0.1:65241 (no session established for client)
